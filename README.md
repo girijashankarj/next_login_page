@@ -96,6 +96,9 @@ Highlight the key features of the project:
 
 7. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to access the locally hosted login page.
 
+<img width="1127" alt="image" src="https://github.com/girijashankarj/next_login_page/assets/38050722/b1c8fdc4-2e17-4c54-913f-1002f2d343b8">
+
+
 ## Chakra UI Variants
 
 Chakra UI is employed with various variants for enhanced styling:
@@ -106,6 +109,9 @@ Chakra UI is employed with various variants for enhanced styling:
 ## Storybook
 
 Storybook is utilized for component development. To access and use Storybook:
+
+<img width="1680" alt="image" src="https://github.com/girijashankarj/next_login_page/assets/38050722/34b571ab-d012-440d-b823-678b3d6fc285">
+
 
 1. Run the Storybook development server:
 
