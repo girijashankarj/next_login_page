@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import React from 'react';
 import { InputGroup } from '@chakra-ui/react';
 import { useController } from 'react-hook-form';
