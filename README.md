@@ -1,132 +1,156 @@
-# Next.js Login Form
+<p align="center">
+  <h1 align="center">next_login_page</h1>
+  <p align="center">
+    A Next.js login page demo showcasing React Hook Form validation, Chakra UI component variants, and Storybook-driven development.
+  </p>
+</p>
+
+<p align="center">
+  <a href="https://github.com/girijashankarj/next_login_page"><img src="https://img.shields.io/github/last-commit/girijashankarj/next_login_page?style=flat-square&logo=github" alt="last commit" /></a>
+  <img src="https://img.shields.io/badge/Next.js-14-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js 14" />
+  <img src="https://img.shields.io/badge/Chakra_UI-2.8-319795?style=flat-square&logo=chakraui&logoColor=white" alt="Chakra UI" />
+  <img src="https://img.shields.io/badge/React_Hook_Form-7-EC5990?style=flat-square&logo=reacthookform&logoColor=white" alt="React Hook Form" />
+  <img src="https://img.shields.io/badge/Storybook-7.5-FF4785?style=flat-square&logo=storybook&logoColor=white" alt="Storybook" />
+  <img src="https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square" alt="PRs welcome" />
+</p>
+
+---
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Quick Start](#quick-start)
+- [Project Structure](#project-structure)
+- [Scripts Reference](#scripts-reference)
+- [Storybook](#storybook)
+- [Contributing](#contributing)
+- [License](#license)
+
+---
 
 ## Overview
 
-This project showcases the development of a login page using a modern tech stack. The key components include:
+**next_login_page** is a demo application that combines Next.js 14, Chakra UI, React Hook Form, and Storybook to build a production-quality login page. It demonstrates reusable form components with multiple input/button variants, form validation, and component documentation via Storybook.
 
-Next.js: Utilized for building a robust and efficient React application with server-side rendering capabilities, enhancing performance and SEO.
-
-Chakra UI: Integrated for seamless and customizable styling, with a focus on demonstrating multiple variant input fields and button styles to enhance the overall user interface.
-
-Storybook: Employed for component development, allowing for isolated testing and documentation of UI components. This enhances the development workflow and promotes component reusability.
-
-React Hook Form: Implemented for efficient form handling, improving the user experience in the login page by providing a reliable and responsive form submission process.
-
-By combining these technologies, the project not only creates a functional login page but also serves as an educational resource for developers interested in leveraging Next.js, Chakra UI, Storybook, and React Hook Form in their projects. The emphasis on variant styles and efficient form handling demonstrates best practices for creating a dynamic and user-friendly web application.
-
-Certainly! Here's the complete README.md file with all the provided information:
-
-## Tech Stack
-
-- Next.js
-- Chakra UI
-- Storybook
-- React Hook Form
+---
 
 ## Features
 
-Highlight the key features of the project:
+- **Login form** — email and password fields with validation
+- **React Hook Form** — performant form handling with error messages
+- **Chakra UI variants** — outline, unstyled, flushed, filled inputs
+- **Button variants** — solid, outline, ghost, link buttons
+- **Storybook** — component isolation and documentation
+- **Responsive design** — mobile-friendly layout
+- **Reusable components** — custom input, button, form foundations
 
-- UI development for a login page
-- Integration of Chakra UI for styling
-- Demonstration of multiple variant input fields
-- Showcase of button variants
-- Implementation of React Hook Form for form handling
+---
 
-## Setup
+## Tech Stack
 
-1. Clone the repository:
+|                  | Details                              |
+| ---------------- | ------------------------------------ |
+| **Framework**    | Next.js 14                           |
+| **UI Library**   | Chakra UI 2.8                        |
+| **Forms**        | React Hook Form 7.47                 |
+| **Component Dev**| Storybook 7.5                        |
+| **Styling**      | Tailwind CSS 3.3 + Chakra theme      |
+| **Language**      | React 18, JavaScript (JSX)           |
+| **Linting**      | ESLint (Next.js config)              |
 
-   ```bash
-   git clone [[repository_url]](https://github.com/girijashankarj/next_login_page)
-   ```
+---
 
-2. Install dependencies:
+## Quick Start
 
-   ```bash
-   npm install
-   ```
+```bash
+git clone https://github.com/girijashankarj/next_login_page.git
+cd next_login_page
+npm install
+npm run dev
+```
 
-3. Run the development server:
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-   ```bash
-   npm run dev
-   ```
+### Run Storybook
 
-4. Run Storybook for component development:
+```bash
+npm run storybook
+```
 
-   ```bash
-   npm run storybook
-   ```
+Open [http://localhost:6006](http://localhost:6006) to browse components.
 
-   Access Storybook at [http://localhost:6006](http://localhost:6006)
+---
 
-5. Build Storybook for production:
+## Project Structure
 
-   ```bash
-   npm run build-storybook
-   ```
+```
+next_login_page/
+├── src/
+│   ├── app/
+│   │   ├── foundations/            # Reusable components
+│   │   │   ├── controlled-input-group/
+│   │   │   ├── cust-button/
+│   │   │   ├── cust-form/
+│   │   │   ├── cust-input/
+│   │   │   └── login-page/
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   ├── page.js
+│   │   └── providers.js           # Chakra UI provider
+│   └── stories/                    # Storybook stories
+├── .storybook/                     # Storybook configuration
+├── .github/workflows/              # CI/CD workflows
+├── docs-build/                     # Built Storybook docs
+├── next.config.js
+├── tailwind.config.js
+├── postcss.config.js
+├── package.json
+└── README.md
+```
 
-6. Additional Scripts:
+---
 
-   - Linting:
+## Scripts Reference
 
-     ```bash
-     npm run lint
-     ```
+| Script            | Command                           | Description                     |
+| ----------------- | --------------------------------- | ------------------------------- |
+| `dev`             | `next dev`                        | Start Next.js dev server        |
+| `build`           | `next build`                      | Build for production            |
+| `start`           | `next start`                      | Start production server         |
+| `lint`            | `next lint`                       | Run ESLint                      |
+| `storybook`       | `storybook dev -p 6006`           | Start Storybook dev server      |
+| `build-storybook` | `storybook build -o docs-build`   | Build static Storybook          |
 
-   - Build the project:
-
-     ```bash
-     npm run build
-     ```
-
-   - Start the production server:
-
-     ```bash
-     npm start
-     ```
-
-   - Run all scripts:
-
-     ```bash
-     npm run all-scripts
-     ```
-
-
-7. Open your web browser and go to [http://localhost:3000](http://localhost:3000) to access the locally hosted login page.
-
-<img width="1127" alt="image" src="https://github.com/girijashankarj/next_login_page/assets/38050722/b1c8fdc4-2e17-4c54-913f-1002f2d343b8">
-
-
-## Chakra UI Variants
-
-Chakra UI is employed with various variants for enhanced styling:
-
-- **Input Fields**: Multiple variants showcasing different styles and states.
-- **Buttons**: Demonstrating various button styles and states for a visually appealing interface.
+---
 
 ## Storybook
 
-Storybook is utilized for component development. To access and use Storybook:
+Storybook is configured for component development and documentation. It provides:
 
-<img width="1680" alt="image" src="https://github.com/girijashankarj/next_login_page/assets/38050722/34b571ab-d012-440d-b823-678b3d6fc285">
+- **Component isolation** — develop and test components in isolation
+- **Multiple variants** — preview all Chakra UI input/button variants
+- **Interactive controls** — adjust props in real-time
+- **Documentation** — auto-generated component docs
 
+---
 
-1. Run the Storybook development server:
+## Contributing
 
-   ```bash
-   npm run storybook
-   ```
+1. **Fork** the repository
+2. **Create** a feature branch: `git checkout -b feature/my-feature`
+3. **Make** your changes
+4. **Commit** and open a Pull Request
 
-2. Open your web browser and go to [http://localhost:6006](http://localhost:6006) to explore and interact with isolated components.
+---
 
-## React Hook Form Integration
+## License
 
-React Hook Form is seamlessly integrated for efficient form handling. It simplifies the form submission process, providing a responsive and user-friendly experience on the login page.
+This project is open source. See the [LICENSE](LICENSE) file for details.
 
-## End Benefits
-Enumerate the benefits that users and developers can gain from this project, such as improved user experience, streamlined development workflows, and enhanced code maintainability.
+---
 
-## Conclusion
-Summarize the project, expressing its significance and how it aligns with industry best practices. Acknowledge the contributions made and express gratitude to contributors and users.
+<p align="center">
+  Built with discipline by <a href="https://github.com/girijashankarj">GarryTJ</a>
+</p>
